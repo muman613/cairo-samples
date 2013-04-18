@@ -10,6 +10,7 @@ TARGET_TYPE=exe
 CPP_SOURCES=draw1.cpp
 
 include ../build/cairo_env.mk
+include ../build/gtk_env.mk
 
 CFLAGS+=$(CAIRO_CFLAGS) $(GTK_CFLAGS)
 LDFLAGS+=$(CAIRO_LIBS) $(GTK_LIBS)

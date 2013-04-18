@@ -51,7 +51,7 @@ $(OBJ_DIR)/%.o : %.c Makefile
 #	executable target
 ################################################################################
 ifeq ($(TARGET_TYPE), exe)
-$(TARGET): objdir exedir $(OBJS) $(EXTERN_LIBS)
+$(TARGET): $(OBJ_DIR) $(EXE_DIR) $(OBJS) $(EXTERN_LIBS)
 	@echo "Linking $(TARGET)"
 	@$(GPP) -o $(TARGET) $(OBJS) $(LDFLAGS)
 endif
@@ -68,11 +68,11 @@ endif
 clean:
 	rm -rf $(OBJS) $(TARGET)
 
-objdir: $(OBJ_DIR)
+$(OBJ_DIR):
 	@echo "Creating object directory..."
 	@mkdir -p $(OBJ_DIR) 
 
-exedir: $(EXE_DIR)
+$(EXE_DIR):
 	@echo "Creating exe directory..."
 	@mkdir -p $(EXE_DIR)
 

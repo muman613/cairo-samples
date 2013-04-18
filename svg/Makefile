@@ -11,8 +11,8 @@ CPP_SOURCES=svggen.cpp
 
 include ../build/cairo_env.mk
 
-CFLAGS+=$(CAIRO_CFLAGS) $(GTK_CFLAGS)
-LDFLAGS+=$(CAIRO_LIBS) $(GTK_LIBS)
+CFLAGS+=$(CAIRO_CFLAGS)
+LDFLAGS+=$(CAIRO_LIBS)
 
 include ../build/buildsys.mk
 
