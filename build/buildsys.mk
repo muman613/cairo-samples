@@ -45,7 +45,7 @@ $(OBJ_DIR)/%.o : %.cpp Makefile
 
 $(OBJ_DIR)/%.o : %.c Makefile
 	@echo "Compiling $*.c"
-	@$(GCC) -c -o $(OBJ_DIR)/$*.o $(CFLAGS) $*.cpp
+	@$(GCC) -c -o $(OBJ_DIR)/$*.o $(CFLAGS) $*.c
 	
 ################################################################################
 #	executable target
