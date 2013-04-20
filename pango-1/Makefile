@@ -9,10 +9,10 @@ TARGET_EXE=pango-list-typefaces
 TARGET_TYPE=exe
 C_SOURCES=pango-list-typefaces.c
 
-include ../build/pango_env.mk
+include ../build/pangocairo_env.mk
 
-CFLAGS+=$(PANGO_CFLAGS)
-LDFLAGS+=$(PANGO_LIBS)
+CFLAGS+=$(PANGOCAIRO_CFLAGS)
+LDFLAGS+=$(PANGOCAIRO_LIBS)
 
 include ../build/buildsys.mk
 
