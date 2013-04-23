@@ -11,6 +11,7 @@ C_SOURCES=pango-view.c viewer-cairo.c viewer-main.c viewer-pangocairo.c       \
 		  viewer-pangoft2.c viewer-pangox.c viewer-pangoxft.c viewer-render.c \
           viewer-x.c
 
+include ../build/tools_env.mk
 include ../build/pangocairo_env.mk
 include ../build/pangoft2_env.mk
 include ../build/pangox_env.mk

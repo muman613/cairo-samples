@@ -2,12 +2,8 @@
 #	MODULE		:	buildsys.mk
 #	AUTHOR 		:	Michael A. Uman
 #	DATE		:	April 10, 2013
+#	LAST MOD	:	April 22, 2013
 ################################################################################
-
-GPP ?= g++			# c++ compiler
-GCC ?= gcc			# c compiler
-AR  ?= ar			# archive tool
-TAR ?= tar			# tar tool
 
 CPP_OBJS=$(CPP_SOURCES:%.cpp=$(OBJ_DIR)/%.o)
 C_OBJS=$(C_SOURCES:%.c=$(OBJ_DIR)/%.o)
@@ -41,7 +37,7 @@ LDFLAGS+=$(EXTERN_LIBS) $(LIBS)
 #	Default rules
 $(OBJ_DIR)/%.o : %.cpp Makefile
 	@echo "Compiling $*.cpp"
-	@$(GPP) -c -o $(OBJ_DIR)/$*.o $(CFLAGS) $*.cpp
+	@$(G++) -c -o $(OBJ_DIR)/$*.o $(CFLAGS) $*.cpp
 
 $(OBJ_DIR)/%.o : %.c Makefile
 	@echo "Compiling $*.c"
@@ -53,7 +49,7 @@ $(OBJ_DIR)/%.o : %.c Makefile
 ifeq ($(TARGET_TYPE), exe)
 $(TARGET): $(OBJ_DIR) $(EXE_DIR) $(OBJS) $(EXTERN_LIBS)
 	@echo "Linking $(TARGET)"
-	@$(GPP) -o $(TARGET) $(OBJS) $(LDFLAGS)
+	@$(G++) -o $(TARGET) $(OBJS) $(LDFLAGS)
 endif
 
 ################################################################################

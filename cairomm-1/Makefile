@@ -9,6 +9,7 @@ TARGET_EXE=cairomm-surface
 TARGET_TYPE=exe
 CPP_SOURCES=cairomm-surface.cpp
 
+include ../build/tools_env.mk
 include ../build/cairomm_env.mk
 
 CFLAGS+=$(CAIROMM_CFLAGS)
