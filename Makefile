@@ -1,4 +1,4 @@
-SUBDIRS=draw1 pdf svg cairomm-1 cairomm-2 pango-1
+SUBDIRS=draw1 pdf svg cairomm-1 pango-1 pango-2
 
 .PHONY : $(SUBDIRS)
 
